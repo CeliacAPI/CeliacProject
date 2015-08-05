@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- meta tags & title -->
+	<meta charset="UTF-8">
+	<title>Celiac Menu Planner</title>
+
+	<!-- responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- favicon -->
+	<!-- <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon"> -->
+
+	<!-- loading fonts & font awesome -->
+	<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700|Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<!-- loading css -->
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+	
+	<div class="wrapper">
+
+	<header>
+		<img src="images/cda-logo.svg" alt="Celiac Disease Association Logo">
+		<h1>Celiac Menu Planner</h1>
+		<h2>Helping you eat well, one week at a time.</h2>
+		
+	</header>
+
+	<div class="wrapperIntro">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, omnis? Nam dolore iusto minus provident, et nisi sequi. Pariatur accusamus tenetur ad aut nobis sed debitis repellat, esse voluptates neque, expedita animi fugiat incidunt labore, totam doloremque. Inventore magnam, maiores harum sed rem, neque ipsa. Impedit tempora dignissimos, animi saepe!</p>
+		<button id="buttonStart">Get Started</button>	
+	</div> <!-- /.wrapperIntro -->
+
+	<div class="wrapperAllergies">
+		<p>Do you have any dairy allergies?</p>
+		<form>
+			<input type="radio" id="yesDairy" name="dairyAllergy" value="no">
+				<label for="yesDairy">Yes</label>
+			<input type="radio" id="noDairy" name="dairyAllergy" value="yes" checked>
+				<label for="noDairy">No</label>
+		</form>
+	</div> <!-- /.wrapperAllergies -->
+
+	<div class="wrapperSubmit">
+		<p>Great! We have all the information we need. Just click the button below to generate your meal plan.</p>
+		<button id="buttonMeals">Get Meal Plan</button>	
+	</div> <!-- /.wrapperSubmit -->
+
+	<div class="wrapperMeals">
+		<div class="mealDay mealMon">
+			<h3>Monday</h3>
+			<div class="breakfast breakfastMon">
+				<img src="http://placehold.it/100x100" alt="">
+				<p>Breakfast Meal Name</p>
+				<i class="fa fa-times-circle"></i>
+			</div>
+			<div class="lunch lunchMon">
+				<img src="http://placehold.it/100x100" alt="">
+				<p>Lunch Meal Name</p>
+				<i class="fa fa-times-circle"></i>
+			</div>
+			<div class="snack snackMon">
+				<img src="http://placehold.it/100x100" alt="">
+				<p>Snack Meal Name</p>
+				<i class="fa fa-times-circle"></i>
+			</div>
+			<div class="dinner dinnerMon">
+				<img src="http://placehold.it/100x100" alt="">
+				<p>Dinner Meal Name</p>
+				<i class="fa fa-times-circle"></i>
+			</div>
+		</div> <!-- /.mealMon -->
+		<button id="reset">Reset</button>	
+	</div> <!-- /.wrapperMeals -->
+
+	<footer>
+		<h4>&copy;2015 Designed & developed by Joanne Ho, Vesna Jocic & Tim Jack Wilkins using the <a href="http://www.yummly.com/">Yummly</a> API.</h4>
+	</footer>
+	
+	</div> <!-- /.wrapper -->
+
+	<!-- loading jquery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	
+	<!-- loading main scripts -->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

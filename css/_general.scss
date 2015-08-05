@@ -1,0 +1,20 @@
+// general styles
+
+html {
+	font-size: 10px;
+}
+
+body {
+	background: rgba(255,255,255,1);
+	font-family: 'Josefin Slab', serif;
+	text-align: center;
+}
+
+.wrapper {
+	max-width: 1000px;
+	width: 75%;
+	margin: 8rem auto;
+	background: $aths;
+}
+
+// end of general styles
