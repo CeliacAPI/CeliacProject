@@ -12,7 +12,49 @@ celiacApp.url = 'http://www.urlhere.com';
 
 // method1
 celiacApp.getMenu = function() {
+	// ajax request to yummly API
+	$.ajax({
+	  url: 'http://api.yummly.com/v1/api/recipes',
+	  method: 'GET',
+	  dataType: 'json',
+	  data: {
+	    _app_id: 'c96ac366',
+	    _app_key: 'db32796dfa41f628acd8aad117494570',
+	    requirePictures: 'true',	
+	    allowedCourse: 'course^course-Breakfast and Brunch',
+	    excludedCourse: 'course^course-Main Dishes',
+	    allowedAllergy: '393^Gluten-Free'
+	  },
+	  // if successful
+	  success: function(result) {
+	  	console.log('it worked!');
+	  	// console.log(result.matches);
+	  	celiacApp.displayBreakfast(result.matches);
+	  },
+	  // if not successful
+	  error: function() {
+	  	console.log('it didn\'t work!');
+	  }
+	});
+};
 
+celiacApp.displayBreakfast = function(matches){
+	for (var i = 0; i < matches.length;i++){
+		// console.log(matches[i]);
+		var recipeId = matches[i].id; // in case we need to remove duplicates
+		// console.log(recipeId);
+		var recipeUrl = matches[i].imageUrlsBySize[90].replace("=s90-c","=s300-c");
+		console.log(recipeUrl);
+		// show recipeImage
+		// $('.breakfastImg').attr('src', recipeImage);
+		var $recipeImg = $('<img>').attr('src', recipeUrl);
+		$('.breakfast figure').append($recipeImg);
+
+	
+		// define var for recipeTitle
+		var recipeTitle = matches[i].recipeName;
+		// console.log(recipeTitle);
+	}
 };
 
 // method2
