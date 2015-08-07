@@ -8,10 +8,10 @@ celiacApp.allergies = ['393^Gluten-Free'];
 celiacApp.getStarted = function() {
 	// on click of start button perform the following method
 	$('#buttonStart').on('click', function() {
-		// fadeOut start button
-		$('#buttonStart').fadeOut(1000, function() {
+		// fadeOut wrapperIntro div
+		$(this).parent('div').fadeOut(600, function() {
 			// fadeIn wrapperAllergies div
-			$('.wrapperAllergies').fadeIn(1000);
+			$('.wrapperAllergies').fadeIn(600);
 		});
 	});
 };
@@ -21,9 +21,9 @@ celiacApp.allergyChoice = function(){
 	$('input[name=dairyAllergy]').on('click', function(){
 		if ($(this).attr('id') === 'yesDairy') {
 			// fadeOut wrapperAllergies
-			$('.wrapperAllergies').fadeOut(1000, function(){
+			$('.wrapperAllergies').fadeOut(600, function(){
 				// fadeIn wrapperSubmit
-				$('.wrapperSubmit').fadeIn(1000);
+				$('.wrapperSubmit').fadeIn(600);
 			});
 			// save allergy choice in allergies object
 			celiacApp.allergies.push('396^Dairy-Free')
@@ -31,9 +31,9 @@ celiacApp.allergyChoice = function(){
 			celiacApp.getBreakfast(celiacApp.allergies);
 		} else {
 			// fadeOut wrapperAllergies
-			$('.wrapperAllergies').fadeOut(1000, function(){
+			$('.wrapperAllergies').fadeOut(600, function(){
 				// fadeIn wrapperSubmit
-				$('.wrapperSubmit').fadeIn(1000);
+				$('.wrapperSubmit').fadeIn(600);
 			});
 			// call getMenu function passing in allergies object
 			celiacApp.getBreakfast(celiacApp.allergies);
@@ -230,21 +230,64 @@ celiacApp.displayDinner = function(matches){
 	}
 };
 
+// method to show all days
 celiacApp.displayAll = function() {
 	// fadeOut wrapperSubmit & fadeIn wrapperMeals
-	$('.wrapperSubmit').fadeOut(1000, function(){
-		$('.wrapperMeals').fadeIn(1000);
+	$('.wrapperSubmit').fadeOut(600, function(){
+		$('.wrapperMeals').fadeIn(600);
 	});
 };
 
-// define your init function
-// this starts everything going on the page
+// method to expand each day
+celiacApp.expandDay = function() {
+	// on click of plus icon
+	$('.dayName > a > .fa-plus').click(function(e) {
+		// prevent default link action
+		e.preventDefault();
+		// slide dayMeals div down
+		$(this).parent().parent().next('div').slideDown(400);
+		console.log($(this).parent().parent().next('div'));
+		// show minus icon
+		$(this).siblings('i').removeClass('hide');
+		console.log($(this).siblings('i'));
+		// hide plus icon
+		$(this).addClass('hide');
+		console.log($(this));
+	});
+}
+
+// method to collapse each day
+celiacApp.collapseDay = function() {
+	// on click of minus icon
+	$('.dayName > a > .fa-minus').click(function(e) {
+		// prevent default link action
+		e.preventDefault();
+		// slide dayMeals div up
+		$(this).parent().parent().next('div').slideUp(400);
+		console.log($(this).parent().parent().next('div'));
+		// show plus icon
+		$(this).siblings('i').removeClass('hide');
+		console.log($(this).siblings('i'));
+		// hide minus icon
+		$(this).addClass('hide');
+		console.log($(this));
+	});
+}
+
+// method to provide new meal
+celiacApp.newMeal = function() {
+
+};
+
+// init function
 celiacApp.init = function() {
 	celiacApp.getStarted();
 	celiacApp.allergyChoice();
+	celiacApp.expandDay();
+	celiacApp.collapseDay();
 };
 
-// document ready function which calls your init function
+// doc ready call init function
 $(document).ready(function(){
   celiacApp.init();
 });

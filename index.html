@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- favicon -->
-	<!-- <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon"> -->
+	<link rel="shortcut icon" href="images/cda-favicon.png" type="image/x-icon">
 
 	<!-- loading fonts & font awesome -->
 	<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700|Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
@@ -227,19 +227,17 @@
 	<div class="wrapper">
 
 	<header>
-	
-		
-		<h2>Helping you eat well, one week at a time.</h2>
-		
+		<img src="images/cda-logo.svg" alt="Celiac Disease Association Logo">
+		<h1>Celiac Menu Planner</h1>
 	</header>
 
 	<div class="wrapperIntro">
-	<!-- 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, omnis? Nam dolore iusto minus provident, et nisi sequi. Pariatur accusamus tenetur ad aut nobis sed debitis repellat, esse voluptates neque, expedita animi fugiat incidunt labore, totam doloremque. Inventore magnam, maiores harum sed rem, neque ipsa. Impedit tempora dignissimos, animi saepe!</p> -->
+		<h2>Helping you eat well, one week at a time.</h2>
 		<button id="buttonStart">Get Started</button>	
 	</div> <!-- /.wrapperIntro -->
 
 	<div class="wrapperAllergies hide">
-		<p>Do you have any dairy allergies?</p>
+		<h2>Do you have any dairy allergies?</h2>
 		<form>
 			<input type="radio" id="yesDairy" name="dairyAllergy" value="no">
 				<label for="yesDairy">Yes</label>
@@ -249,234 +247,235 @@
 	</div> <!-- /.wrapperAllergies -->
 
 	<div class="wrapperSubmit hide">
-		<p>Great! We have all the information we need. Just click the button below to generate your meal plan.</p>
+		<h2>Great! We have all the information we need. Just click the button below to generate your meal plan.</h2>
 		<button id="buttonMeals">Get Meal Plan</button>	
 	</div> <!-- /.wrapperSubmit -->
 
 	<div class="wrapperMeals hide">
-		<div class="mealDay mealMon">
-			<h3>Monday</h3>
-			<div class="breakfast breakfastMon">
-				<figure>
-					
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="lunch lunchMon">
-				<figure>
-					
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="snack snackMon">
-				<figure>
-			
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="dinner dinnerMon">
-				<figure>
-				
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-		</div> <!-- /.mealMon -->
 
-		<div class="mealDay mealTues">
-			<h3>Tuesday</h3>
-			<div class="breakfast breakfastTues">
-				<figure>
-					
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="lunch lunchTues">
-				<figure>
-					<img class="lunchImg" src="" alt="">
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="snack snackTues">
-				<figure>
-					<img class="snackImg" src="" alt="">
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="dinner dinnerTues">
-				<figure>
-					<img class="dinnerImg" src="" alt="">
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-		</div> <!-- /.mealTues -->
+		<div id="mon" class="day mon">
+			<div class="dayName dayNameMon">
+				<h3>Monday</h3>
+				<a href="#">
+					<i class="fa fa-plus"></i>
+					<i class="fa fa-minus hide"></i>
+				</a>
+			</div> <!-- /.dayName -->
+			<div class="dayMeal dayMealMon hide">
+				<div class="breakfast breakfastMon">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="lunch lunchMon">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="snack snackMon">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="dinner dinnerMon">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+			</div> <!-- /.dayMealMon -->
+		</div> <!-- /.mon -->
 
-		<div class="mealDay mealWed">
-			<h3>Wednesday</h3>
-			<div class="breakfast breakfastWed">
-				<figure>
-					
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="lunch lunchWed">
-				<figure>
-					
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="snack snackWed">
-				<figure>
-			
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="dinner dinnerWed">
-				<figure>
-				
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-		</div> <!-- /.mealWed -->
+		<div id="tues" class="day tues">
+			<div class="dayName dayNameTues">
+				<h3>Tuesday</h3>
+				<a href="#">
+					<i class="fa fa-plus"></i>
+					<i class="fa fa-minus hide"></i>
+				</a>
+			</div> <!-- /.dayName -->
+			<div class="dayMeal dayMealTues hide">
+				<div class="breakfast breakfastTues">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="lunch lunchTues">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="snack snackTues">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="dinner dinnerTues">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+			</div> <!-- /.dayMealTues -->
+		</div> <!-- /tues -->
 
-				<div class="mealDay mealThurs">
-			<h3>Thursday</h3>
-			<div class="breakfast breakfastThurs">
-				<figure>
-					
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="lunch lunchThurs">
-				<figure>
-					
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="snack snackThurs">
-				<figure>
-			
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="dinner dinnerThurs">
-				<figure>
-				
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-		</div> <!-- /.meaThurs -->
+		<div id="wed" class="day wed">
+			<div class="dayName dayNameWed">
+				<h3>Wednesday</h3>
+				<a href="#">
+					<i class="fa fa-plus"></i>
+					<i class="fa fa-minus hide"></i>
+				</a>
+			</div> <!-- /.dayName -->
+			<div class="dayMeal dayMealWed hide">
+				<div class="breakfast breakfastWed">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="lunch lunchWed">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="snack snackWed">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="dinner dinnerWed">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+			</div> <!-- /.dayMealWed -->
+		</div> <!-- /.wed -->
 
-				<div class="mealDay mealFri">
-			<h3>Friday</h3>
-			<div class="breakfast breakfastFri">
-				<figure>
-					
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="lunch lunchFri">
-				<figure>
-					
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="snack snackFri">
-				<figure>
-			
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="dinner dinnerFri">
-				<figure>
-				
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-		</div> <!-- /.mealFri -->
+		<div id="thurs" class="day thurs">
+			<div class="dayName dayNameThurs">
+				<h3>Thursday</h3>
+				<a href="#thurs">
+					<i class="fa fa-plus"></i>
+					<i class="fa fa-minus hide"></i>
+				</a>
+			</div> <!-- /.dayName -->
+			<div class="dayMeal dayMealThurs hide">
+				<div class="breakfast breakfastThurs">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="lunch lunchThurs">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="snack snackThurs">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="dinner dinnerThurs">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+			</div> <!-- /.dayMealThurs -->
+		</div> <!-- /.thurs -->
 
-				<div class="mealDay mealSat">
-			<h3>Saturday</h3>
-			<div class="breakfast breakfastSat">
-				<figure>
-					
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="lunch lunchSat">
-				<figure>
-					
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="snack snackSat">
-				<figure>
-			
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="dinner dinnerSat">
-				<figure>
-				
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-		</div> <!-- /.mealSat -->
+		<div id="fri" class="day fri">
+			<div class="dayName dayNameFri">
+				<h3>Friday</h3>
+				<a href="#fri">
+					<i class="fa fa-plus"></i>
+					<i class="fa fa-minus hide"></i>
+				</a>
+			</div> <!-- /.dayName -->
+			<div class="dayMeal dayMealFri hide">
+				<div class="breakfast breakfastFri">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="lunch lunchFri">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="snack snackFri">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="dinner dinnerFri">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div> 
+			</div> <!-- /.dayMealFri -->
+		</div> <!-- /.fri -->
 
-				<div class="mealDay mealSun">
-			<h3>Sunday</h3>
-			<div class="breakfast breakfastSun">
-				<figure>
-					
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="lunch lunchSun">
-				<figure>
-					
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="snack snackSun">
-				<figure>
-			
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-			<div class="dinner dinnerSun">
-				<figure>
-				
-				</figure>
-				<p></p>
-				<i class="fa fa-random"></i>
-			</div>
-		</div> <!-- /.mealSunday -->
+		<div id="sat" class="day sat">
+			<div class="dayName dayNameSat">
+				<h3>Saturday</h3>
+				<a href="#sat">
+					<i class="fa fa-plus"></i>
+					<i class="fa fa-minus hide"></i>
+				</a>
+			</div> <!-- /.dayName -->
+			<div class="dayMeal dayMealSat hide">
+				<div class="breakfast breakfastSat">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="lunch lunchSat">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="snack snackSat">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="dinner dinnerSat">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+			</div> <!-- /.dayMealSat -->
+		</div> <!-- /.sat -->
+
+		<div class="day sun">
+			<div class="dayName dayNameSun">
+				<h3>Sunday</h3>
+				<a href="#" class="expand">
+					<i class="fa fa-plus"></i>
+					<i class="fa fa-minus hide"></i>
+				</a>
+			</div> <!-- /.dayName -->
+			<div class="dayMeal dayMealSun hide">
+				<div class="breakfast breakfastSun">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="lunch lunchSun">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="snack snackSun">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+				<div class="dinner dinnerSun">
+					<figure></figure>
+					<p></p>
+					<i class="fa fa-random"></i>
+				</div>
+			</div> <!-- /.dayMealSun -->
+		</div> <!-- /.sun -->
 
 		<button id="reset">Reset</button>	
 	</div> <!-- /.wrapperMeals --> 
