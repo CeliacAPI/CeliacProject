@@ -5,16 +5,31 @@ html {
 }
 
 body {
-	background: rgba(255,255,255,1);
+	background-image: url("../images/glutenpic.jpg");
+	background-size: cover;
 	font-family: 'Josefin Slab', serif;
 	text-align: center;
+
+
 }
 
 .wrapper {
 	max-width: 1000px;
 	width: 75%;
 	margin: 8rem auto;
-	background: $aths;
+	background: rgba(250, 250, 250, 0.7);
+	padding: 2%;
+}
+
+.title-wrapper {
+	width: 75%;
+	margin: 2rem auto;
+}
+
+header {
+	width: 75%;
+	margin: 0 auto;
+	padding-bottom: 20px;
 }
 
 // helper styles
@@ -26,5 +41,23 @@ body {
 .show {
 	display: block;
 }
+
+svg {
+	fill: white;
+}
+
+
+//BUTTON STYLES
+
+button {
+	color: white;
+	background: $sanmarino;
+	padding: 10px 30px;
+	border: none;
+	font-size: 18px;
+	font-family: 'Quicksand', sans-serif;
+	margin: 20px 0;
+}	
+
 
 // end of general styles
