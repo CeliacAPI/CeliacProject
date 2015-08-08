@@ -25,6 +25,7 @@
 
 	<div class="title-wrapper">
 		<?xml version="1.0" encoding="utf-8"?>
+
 		<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 		<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -224,32 +225,44 @@
 			<rect x="47.26" y="22.782" clip-path="url(#SVGID_36_)" width="44.896" height="61.548"/>
 		</g>
 		</svg>
+
+		<!-- ====================== -->
+		<!-- 	END OF SVG -->
+		<!-- ====================== -->
+
 		<h1>Celiac Menu Planner</h1>
+
 	</div> <!-- /.titleWrapper -->
+	
+	<div class="backgroundcontainer">
 
-	<div class="wrapper">
+		<div class="wrapper">
+		
+			<div class="wrapperIntro">
+				<h2>Helping you eat well, one week at a time.</h2>
+				<button id="buttonStart">Get Started</button>	
+			</div> <!-- /.wrapperIntro -->
 
-	<div class="wrapperIntro">
-		<h2>Helping you eat well, one week at a time.</h2>
-		<button id="buttonStart">Get Started</button>	
-	</div> <!-- /.wrapperIntro -->
+			<div class="wrapperAllergies hide">
+				<h2>Do you have any dairy allergies?</h2>
+				<div class="form-container">
+				<form>
+					<input type="radio" id="yesDairy" name="dairyAllergy" value="no">
+						<label for="yesDairy">Yes</label>
+					<input type="radio" id="noDairy" name="dairyAllergy" value="yes" >
+						<label for="noDairy">No</label>
+				</form>
+				</div> 
+			</div> <!-- /.wrapperAllergies -->
 
-	<div class="wrapperAllergies hide">
-		<h2>Do you have any dairy allergies?</h2>
-		<form>
-			<input type="radio" id="yesDairy" name="dairyAllergy" value="no">
-				<label for="yesDairy">Yes</label>
-			<input type="radio" id="noDairy" name="dairyAllergy" value="yes" >
-				<label for="noDairy">No</label>
-		</form>
-	</div> <!-- /.wrapperAllergies -->
+			<div class="wrapperSubmit hide">
+				<h2>Great! We have all the information we need. Just click the button below to generate your meal plan.</h2>
+				<button id="buttonMeals">Get Meal Plan</button>	
+			</div> <!-- /.wrapperSubmit -->
 
-	<div class="wrapperSubmit hide">
-		<h2>Great! We have all the information we need. Just click the button below to generate your meal plan.</h2>
-		<button id="buttonMeals">Get Meal Plan</button>	
-	</div> <!-- /.wrapperSubmit -->
+		</div> <!-- /.wrapper -->
 
-	<div class="wrapperMeals hide">
+		<div class="wrapperMeals hide">
 
 		<div id="mon" class="day mon">
 			<div class="dayName dayNameMon">
@@ -261,14 +274,22 @@
 			</div> <!-- /.dayName -->
 			<div class="dayMeal dayMealMon hide">
 				<div class="meal breakfast breakfastMon">
-					<figure></figure> <!-- recipe image goes here -->
-					<a class="recipeUrl" href=""></a> <!-- recipe name & link go here -->
-					<p></p> <!-- ingredients go here -->
-					<a href="mailto:?subject=Gluten-free Breakfast Recipe&body=recipeName recipeUrl">Email Recipe</a> <!-- recipe link goes here -->
-					<a href="#" data-meal="breakfast">
-						<i class="fa fa-random"></i>
-					</a>
-				</div>
+					<div class="flex-mealImg">
+						<figure></figure> <!-- recipe image goes here -->
+					</div> <!-- /.flex-mealImg -->
+					<div class="flex-mealInfo">
+						<div class="flex-mealName">
+							<a class="recipeUrl" href=""></a> <!-- recipe name & link go here -->
+							<p class="recipeIngredients">Lorem, Ipsum, Dolor, Quidem</p> <!-- ingredients go here -->
+						</div> <!-- /.flex-mealName -->
+						<div class="flex-mealLinks">
+							<a href="mailto:?subject=Gluten-free Breakfast Recipe&body=recipeName recipeUrl">Email Recipe</a> <!-- recipe link goes here -->
+							<a href="#" data-meal="breakfast">
+								<i class="fa fa-random"></i>
+							</a>
+						</div> <!-- /.flex-mealLinks -->
+					</div> <!-- /.flex-mealInfo -->
+				</div> <!-- /.breakfastMon -->
 				<div class="meal lunch lunchMon">
 					<figure></figure>
 					<p></p>
