@@ -99,4 +99,26 @@ label {
 
 // end of general styles
 
+//MEAL LAYOUT STYLES
+
+.meal-flex {
+	display: flex;
+	width: 30%;
+	padding: 10px;
+}
+
+.flex-description {
+	display: flex;
+	width: 70%;
+	flex-direction: column;
+}
+
+.breakfast,
+.lunch,
+.snack,
+.dinner {
+	display: flex;
+	background: white; 
+}
+
 
