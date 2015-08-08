@@ -114,7 +114,10 @@ label {
 	flex-direction: column;
 }
 
-.breakfast {
+.breakfast,
+.lunch,
+.snack,
+.dinner {
 	display: flex;
 	background: white; 
 }
