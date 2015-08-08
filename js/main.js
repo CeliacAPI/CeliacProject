@@ -6,6 +6,9 @@ celiacApp.allergies = ['393^Gluten-Free'];
 
 // method to hide start button and show dairy allergy question
 celiacApp.getStarted = function() {
+	$('.title-wrapper').fadeIn(1000);
+	$('h1').fadeIn(1000);
+	$('.wrapper').fadeIn(1000);
 	// on click of start button perform the following method
 	$('#buttonStart').on('click', function() {
 		// fadeOut wrapperIntro div
@@ -177,7 +180,7 @@ celiacApp.displayBreakfast = function(matches){
 		$('.breakfast figure').eq(i).append($recipeImg);
 		// show recipeName
 		var $recipeTitle = matches[i].recipeName;
-		$('.breakfast p').eq(i).append($recipeTitle);
+		$('.breakfast .flex-mealName a').eq(i).append($recipeTitle);
 	}
 };
 
