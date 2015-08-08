@@ -1,15 +1,29 @@
 // general styles
 
 html {
-	font-size: 10px;
+font-size: 10px;
+  background: url("../images/celiacback.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
+
 body {
-	background-image: url("../images/glutenpic.jpg");
+
+	// background-image: url("../images/celiacback.jpg");
 	background-size: cover;
+	background-position: center bottom;
+	background-repeat: no-repeat;
 	font-family: 'Josefin Slab', serif;
 	text-align: center;
 
+
+}
+
+.backgroundcontainer {
+ padding: 0px 0;
 
 }
 
@@ -17,13 +31,16 @@ body {
 	max-width: 1000px;
 	width: 75%;
 	margin: 8rem auto;
-	background: rgba(250, 250, 250, 0.7);
+	background: rgba(66, 101, 173, 0.6);
 	padding: 2%;
+	height: 215px;
+
 }
 
 .title-wrapper {
 	width: 75%;
-	margin: 2rem auto;
+	margin: 0 auto;
+	margin-top: 30px;
 }
 
 header {
@@ -43,7 +60,7 @@ header {
 }
 
 svg {
-	fill: white;
+	fill: $sanmarino;;
 }
 
 
@@ -51,7 +68,7 @@ svg {
 
 button {
 	color: white;
-	background: $sanmarino;
+	background: $downy;
 	padding: 10px 30px;
 	border: none;
 	font-size: 18px;
@@ -59,5 +76,51 @@ button {
 	margin: 20px 0;
 }	
 
+form {
+	display:flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items: center;
+	padding-top: 20px;
+
+}
+
+input[type=radio] {
+	font-size: 100px;
+}
+
+label {
+	font-size:20px;
+	padding: 20px;
+	font-family:'Quicksand', sans-serif;
+	color: white;
+}
+
 
 // end of general styles
+
+//MEAL LAYOUT STYLES
+
+.meal-flex {
+	display: flex;
+	width: 30%;
+	padding: 10px;
+
+}
+
+.flex-description {
+	display: flex;
+	width: 70%;
+	flex-direction: column;
+}
+
+.breakfast {
+	display: flex;
+	background: white; 
+}
+
+.food-description {
+	text-align: left;
+	margin: 0;
+	padding: 0 10px;
+}

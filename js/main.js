@@ -46,6 +46,7 @@ celiacApp.getBreakfast = function() {
 	// on click of get meal plan button
 	// get breakfasts
 	$('#buttonMeals').on('click', function(){
+		$('.wrapper').fadeOut();
 		$.ajaxSettings.traditional = true;
 		// ajax request to yummly API for breakfast meals
 		$.ajax({
