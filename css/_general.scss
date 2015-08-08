@@ -33,7 +33,7 @@ body {
 	margin: 8rem auto;
 	background: rgba(66, 101, 173, 0.6);
 	padding: 2%;
-	height: 215px;
+	height: 235px;
 
 }
 
@@ -60,7 +60,8 @@ header {
 }
 
 svg {
-	fill: $sanmarino;;
+	fill: $sanmarino;
+
 }
 
 
@@ -96,31 +97,6 @@ label {
 	color: white;
 }
 
-
 // end of general styles
 
-//MEAL LAYOUT STYLES
 
-.meal-flex {
-	display: flex;
-	width: 30%;
-	padding: 10px;
-
-}
-
-.flex-description {
-	display: flex;
-	width: 70%;
-	flex-direction: column;
-}
-
-.breakfast {
-	display: flex;
-	background: white; 
-}
-
-.food-description {
-	text-align: left;
-	margin: 0;
-	padding: 0 10px;
-}

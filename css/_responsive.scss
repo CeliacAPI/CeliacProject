@@ -1,0 +1,65 @@
+@media (max-width: 1020px) {
+    .wrapper {
+       margin-top: 40px;
+    }
+}
+
+@media (max-width: 1030px){
+	h1 {
+		font-size: 6rem;
+	}
+
+	h2 {
+		font-size: 2.6rem;
+	}
+	.wrapper {
+		height: 215px;
+	}
+	
+}
+
+@media (max-width: 800px){
+	.recipeUrl {
+		font-size: 2rem;
+	}
+
+	.recipeIngredients {
+		font-size: 1.5rem;
+	}
+
+
+}	
+
+@media (max-width: 500px){
+	h1 {
+		font-size: 4rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	.wrapper {
+		margin-bottom: 20px;
+		height: 180px;
+		  margin-top: 20px;
+	}
+
+	.dayName a {
+
+		right: 30px;
+	}
+
+	#buttonStart {
+		
+		font-size: 14px;
+		margin-top: 0;
+	}
+
+	svg {
+		width: 20%;
+	}
+	.flex-mealLinks a {
+		font-size:1.5rem;
+	}
+}
