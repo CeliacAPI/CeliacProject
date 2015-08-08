@@ -276,7 +276,44 @@ celiacApp.collapseDay = function() {
 
 // method to provide new meal
 celiacApp.newMeal = function() {
-
+	// for (var i = 0; i < 10;i++) {
+	// on click of shuffle icon
+		$('.dayMeal > .meal > a').click(function(e) {
+			// prevent default link action
+			e.preventDefault();
+			// saving meal type in a variable
+			var mealType = $(this).data('meal');
+			// ajax request to yummly API for new meal
+			$.ajax({
+			  url: 'http://api.yummly.com/v1/api/recipes',
+			  method: 'GET',
+			  dataType: 'json',
+			  data: {
+			    _app_id: 'c96ac366',
+			    _app_key: 'db32796dfa41f628acd8aad117494570',
+			    requirePictures: 'true',	
+			    allowedCourse: 'course^course-Breakfast and Brunch',
+			    allowedAllergy: celiacApp.allergies
+			  },
+			  // if successful
+			  success: function(result) {
+			  	// console log returned meals
+			  	console.log(result.matches[7]);
+			  	// create variable to hold recipeUrl
+			  	var recipeUrl = matches[7].imageUrlsBySize[90].replace("=s90-c","=s300-c");
+			  	// show recipeImage
+			  	console.log($(this).sibling('figure'));
+			  	// show recipeName
+			  	var $recipeTitle = matches[i].recipeName;
+			  	$('.breakfast p').eq(i).append($recipeTitle);
+			  },
+			  // if not successful
+			  error: function() {
+			  	console.log('it didn\'t work!');
+			  }
+			});
+		});
+	// };
 };
 
 // init function
@@ -285,6 +322,7 @@ celiacApp.init = function() {
 	celiacApp.allergyChoice();
 	celiacApp.expandDay();
 	celiacApp.collapseDay();
+	celiacApp.newMeal();
 };
 
 // doc ready call init function
