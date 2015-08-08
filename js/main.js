@@ -21,6 +21,9 @@ celiacApp.dinners = [];
 
 // method to hide start button and show dairy allergy question
 celiacApp.getStarted = function() {
+	$('.title-wrapper').fadeIn(1000);
+	$('h1').fadeIn(1000);
+	$('.wrapper').fadeIn(1000);
 	// on click of start button
 	$('#buttonStart').on('click', function() {
 		// fadeOut wrapperIntro div
