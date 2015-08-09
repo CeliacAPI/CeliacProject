@@ -1,69 +1,154 @@
 // media queries
 
-@media (max-width: 1020px) {
-    .wrapper {
-       margin-top: 40px;
-    }
+@media (max-width: 1200px) {
+	h1 {
+		font-size: 7rem;
+	}
+	.wrapper {
+	   margin-top: 2rem;
+	}
+	.wrapperMeals {
+		width: 70%;
+	}
 }
 
-@media (max-width: 1030px){
+@media (max-width: 950px) {
+	html {
+		font-size: 9px;
+	}
+}
+
+@media (max-width: 850px) {
 	h1 {
 		font-size: 6rem;
 	}
-	h2 {
-		font-size: 2.6rem;
-	}
-	.wrapper {
-		height: 215px;
-	}
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
+	h1 {
+		font-size: 5.5rem;
+	}
+	h3 {
+		font-size: 2.6rem;
+	}
+	.dayName {
+		padding: 1.8rem 2rem;
+	}
+	.fa-plus,
+	.fa-minus {
+		font-size: 2rem;
+	}
 	.recipeUrl {
 		font-size: 2rem;
 	}
 	.recipeIngredients {
-		font-size: 1.5rem;
+		font-size: 1.6rem;
 	}
 }	
 
-@media (max-width: 500px){
+@media (max-width: 650px) {
+	h1 {
+		font-size: 5rem;
+	}
+}
+
+@media (max-width: 600px) {
+	h1 {
+		font-size: 4.8rem;
+	}
+	.wrapperMeals {
+		width: 75%;
+	}
+	.dayName {
+		padding-bottom: 1.6rem;
+	}
+	.recipeIngredients {
+		display: none;
+	}
+	.fa-plus,
+	.fa-minus {
+		font-size: 2rem;
+	}
+	footer {
+		padding: 0 12rem;
+	}
+}
+
+@media (max-width: 550px) {
+	h1 {
+		font-size: 4.5rem;
+	}
+}
+
+@media (max-width: 500px) {
 	h1 {
 		font-size: 4rem;
 	}
 	h2 {
 		font-size: 2rem;
+		padding-left: 3.5rem;
+		padding-right: 3.5rem;
 	}
-
+	.wrapperSubmit h2 {
+		padding-left: 2.6rem;
+		padding-right: 2.6rem;
+	}
 	h3 {
-		font-size: 1.7rem;
+		font-size: 2.4rem;
 	}
-
-	.fa-plus {
-		font-size: 1.5rem;
+	.title-wrapper img {
+		width: 35%;
 	}
-
-	.fa-minus {
-		font-size: 1.5rem;
+	#buttonStart,
+	#buttonMeals {	
+		font-size: 14px;
+		margin-top: 0;
+	}
+	#reset {
+		font-size: 14px;
 	}
 	.wrapper {
 		margin-bottom: 20px;
 		height: 180px;
 		margin-top: 20px;
 	}
-	.dayName a {
-
-		right: 30px;
+	.wrapperMeals {
+		width: 80%;
 	}
-	#buttonStart {	
-		font-size: 14px;
-		margin-top: 0;
+	.fa-plus,
+	.fa-minus {
+		font-size: 1.6rem;
 	}
-	svg {
-		width: 20%;
+	.recipeUrl {
+		font-size: 1.8rem;
 	}
 	.flex-mealLinks a {
-		font-size:1.5rem;
+		font-size: 1.8rem;
+	}
+	footer {
+		padding: 0 9rem;
+	}
+}
+
+@media (max-width: 450px) {
+	h1 {
+		font-size: 3.5rem;
+	}
+}
+
+@media (max-width: 400px) {
+	h3 {
+		font-size: 2.1rem;
+	}
+	.fa-plus,
+	.fa-minus {
+		font-size: 1.4rem;
+	}
+	.recipeUrl {
+		font-size: 1.6rem;
+	}
+	footer {
+		padding: 0 6rem;
 	}
 }
 

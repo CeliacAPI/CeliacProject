@@ -18,7 +18,7 @@ body {
 }
 
 .bgContainer {
- 	padding: 0 0;
+ 	padding: 0;
 }
 
 .wrapper {
@@ -27,28 +27,38 @@ body {
 	margin: 0 auto;
 	background: rgba(66, 101, 173, 0.6);
 	padding: 2%;
-	// height: 235px;
 }
 
 .title-wrapper {
 	width: 75%;
 	margin: 0 auto;
-	margin-top: 30px;
+	margin-top: 3rem;
+}
+
+.wrapperLoading {
+	width: 80%;
+	margin: 16rem auto 0 auto;
+	// max-width: 400px;
+}
+
+.wrapperLoading h2 {
+	color: $sanmarino;
 }
 
 header {
 	width: 75%;
 	margin: 0 auto;
-	padding-bottom: 20px;
+	padding-bottom: 2rem;
 }
 
 footer {
 	margin: 0 auto;
-	display: flex:
-	flex-direction: column:
+	padding: 0 6rem;
+	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	a {
-		color: white;
+		color: rgba(128,128,128,1);
 	}
 }
 
@@ -62,30 +72,30 @@ footer {
 	display: block;
 }
 
-svg {
-	fill: $sanmarino;
-}
-
 // form & button styles
 
 form {
-	display:flex;
-	flex-direction:row;
+	display: flex;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	padding-top: 9px;
-	padding-bottom: 10px;
+	padding-top: 0.9rem;
+	padding-bottom: 1rem;
 }
 
 button {
 	color: white;
 	background: $downy;
-	padding: 10px 30px;
+	padding: 1rem 3rem;
 	border: none;
-	font-size: 18px;
+	font-size: 1.8rem;
 	font-family: 'Quicksand', sans-serif;
-	margin: 20px 0;
+	margin: 2rem 0;
 	transition: all 0.5s ease;
+	a {
+		color: white;
+		text-decoration: none;
+	}
 }
 
 button:hover {
@@ -93,13 +103,13 @@ button:hover {
 }	
 
 input[type=radio] {
-	font-size: 100px;
-	margin-left: 15px;
+	font-size: 10rem;
+	margin-left: 1.5rem;
 }
 
 label {
-	font-size: 20px;
-	padding: 20px 20px 20px 10px;
+	font-size: 2rem;
+	padding: 2rem 2rem 2rem 1rem;
 	font-family: 'Quicksand', sans-serif;
 	color: white;
 }
