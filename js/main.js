@@ -67,6 +67,8 @@ celiacApp.getBreakfast = function() {
 	$('#buttonMeals').on('click', function(){
 		// fade out wrapper div
 		$('.wrapper').fadeOut();
+		// fade out h1
+		$('h1').fadeOut();
 		// Drew told us to add this line of code ???
 		$.ajaxSettings.traditional = true;
 		// ajax request to yummly API for breakfast meals
@@ -343,56 +345,111 @@ celiacApp.collapseDay = function() {
 // method to provide new meal
 // called by init function
 celiacApp.newMeal = function() {
-	// for (var i = 0; i < 10;i++) {
-		// on click of shuffle icon
+	for (var i = 6; i <= 6; i++) {
+	// on click of shuffle icon
 		$('.shuffle').click(function(e) {
 			// prevent default link action
 			e.preventDefault();
 			// saving meal type in a variable
 			var $mealType = $(this).data('meal');
-			console.log($mealType);
+			// console.log($mealType);
 			// if else statements to call new meals from meal arrays
 			if ($mealType === 'breakfast') {
-					// console log new breakfast recipe
-				 	console.log(celiacApp.breakfasts[0]);
-					// var recipeImgUrl = matches[i].imageUrlsBySize[90].replace("=s90-c","=s300-c");
-					// // create a variable to hold the recipe img url inside img tags
-					// var $recipeImg = $('<img>').attr('src', recipeImgUrl);
-					// // inserting the created img tags into the existing figure tags
-					// $('.breakfast figure').eq(i).append($recipeImg);
-					// // creating a variable to hold the recipe id
-					// var $recipeId = matches[i].id;
-					// // creating a variable to hold the recipe url (root url + recipe id)
-					// var $recipeUrl = celiacApp.yummlyRoot.concat($recipeId);
-					// // inserting the recipe url 
-					// $('.breakfast .flex-mealName a').eq(i).attr('href', $recipeUrl);
-					// // creating a variable to hold the recipe title
-					// var $recipeTitle = matches[i].recipeName;
-					// // inserting the recipe name inside the existing a tags
-					// $('.breakfast .flex-mealName a').eq(i).append($recipeTitle);
-					// // creating a variable to hold the recipe ingredients
-					// var $recipeIngredients =  matches[i].ingredients;
-					// // creating a variable to hold the recipe ingredients as a string
-					// var $ingredientsString = $recipeIngredients.join(', ');
-					// // inserting the ingredients into the existing p tag
-					// $('.breakfast .flex-mealInfo .flex-mealName .recipeIngredients').eq(i).append($ingredientsString);
-					// // creating a variable to hold recipe email root message
-					// var emailRoot = 'mailto:?subject=Gluten-Free Breakfast Recipe&body=';
-					// // creating a variable to hold recipe email content
-					// var emailContent = '%0D%0A' + $recipeTitle + '%0D%0A' + $recipeUrl + '%0D%0A%0D%0Avia http://www.celiacmenuplanner.com';
-					// // creating a variable to hold recipe email message
-					// var $recipeEmail = emailRoot.concat(emailContent);
-					// // inserting the recipe name and link inside the existing a mail to tag
-					// $('.breakfast .flex-mealLinks .email').eq(i).attr('href', $recipeEmail);
+				// console log new breakfast recipe object
+			 	// console.log(celiacApp.breakfasts[0][i]);
+			 	// creating a variable to hold new breakfast img url
+			 	var $newImgUrl = celiacApp.breakfasts[0][i].imageUrlsBySize[90].replace("=s90-c","=s300-c");
+				// // creating a variable to hold the recipe img url inside img tags
+				var $newImg = $('<img>').attr('src', $newImgUrl);
+				// replacing the existing img tag with the new img tags
+				$(this).parent('div').parent('div').parent('div').find('figure').children('img').replaceWith($newImg);
+				// creating a variable to hold the new breakfast recipe id
+				var $newRecipeId = celiacApp.breakfasts[0][i].id;
+				// creating a variable to hold the recipe url (root url + recipe id)
+				var $newRecipeUrl = celiacApp.yummlyRoot.concat($newRecipeId);
+				// inserting the recipe url 
+				$(this).parent('div').parent('div').find('a.recipeUrl').attr('href', $newRecipeUrl);
+				// creating a variable to hold the new recipe title
+				var $newRecipeTitle = celiacApp.breakfasts[0][i].recipeName;
+				// inserting the recipe name inside the existing a tags
+				$(this).parent('div').parent('div').find('a.recipeUrl').html($newRecipeTitle);
+				// creating a variable to hold the recipe ingredients
+				var $newRecipeIngredients =  celiacApp.breakfasts[0][i].ingredients;
+				// creating a variable to hold the recipe ingredients as a string
+				var $newIngredientsString = $newRecipeIngredients.join(', ');
+				// inserting the ingredients into the existing p tag
+				$(this).parent('div').parent('div').find('p.recipeIngredients').html('Ingredients: ' + $newIngredientsString);
+				// creating a variable to hold recipe email root message
+				var emailRoot = 'mailto:?subject=Gluten-Free Breakfast Recipe&body=';
+				// creating a variable to hold recipe email content
+				var newEmailContent = '%0D%0A' + $newRecipeTitle + '%0D%0A' + $newRecipeUrl + '%0D%0A%0D%0Avia http://www.celiacmenuplanner.com';
+				// creating a variable to hold recipe email message
+				var $newRecipeEmail = emailRoot.concat(newEmailContent);
+				// inserting the recipe name and link inside the existing a mail to tag
+				$(this).parent('div').find('a.email').attr('href', $newRecipeEmail);
+				// adding 1 to var i
+				i = i+1;
+				// console.log(i);
 			} else if ($mealType === 'lunch') {
-
+			 	// console.log(celiacApp.lunches[0][i]);
+			 	var $newImgUrl = celiacApp.lunches[0][i].imageUrlsBySize[90].replace("=s90-c","=s300-c");
+				var $newImg = $('<img>').attr('src', $newImgUrl);
+				$(this).parent('div').parent('div').parent('div').find('figure').children('img').replaceWith($newImg);
+				var $newRecipeId = celiacApp.lunches[0][i].id;
+				var $newRecipeUrl = celiacApp.yummlyRoot.concat($newRecipeId);
+				$(this).parent('div').parent('div').find('a.recipeUrl').attr('href', $newRecipeUrl);
+				var $newRecipeTitle = celiacApp.lunches[0][i].recipeName;
+				$(this).parent('div').parent('div').find('a.recipeUrl').html($newRecipeTitle);
+				var $newRecipeIngredients =  celiacApp.lunches[0][i].ingredients;
+				var $newIngredientsString = $newRecipeIngredients.join(', ');
+				$(this).parent('div').parent('div').find('p.recipeIngredients').html('Ingredients: ' + $newIngredientsString);
+				var emailRoot = 'mailto:?subject=Gluten-Free Lunch Recipe&body=';
+				var newEmailContent = '%0D%0A' + $newRecipeTitle + '%0D%0A' + $newRecipeUrl + '%0D%0A%0D%0Avia http://www.celiacmenuplanner.com';
+				var $newRecipeEmail = emailRoot.concat(newEmailContent);
+				$(this).parent('div').find('a.email').attr('href', $newRecipeEmail);
+				i = i+1;
+				// console.log(i);
 			} else if ($mealType === 'snack') {
-
+			 	// console.log(celiacApp.snacks[0][i]);
+			 	var $newImgUrl = celiacApp.snacks[0][i].imageUrlsBySize[90].replace("=s90-c","=s300-c");
+				var $newImg = $('<img>').attr('src', $newImgUrl);
+				$(this).parent('div').parent('div').parent('div').find('figure').children('img').replaceWith($newImg);
+				var $newRecipeId = celiacApp.snacks[0][i].id;
+				var $newRecipeUrl = celiacApp.yummlyRoot.concat($newRecipeId);
+				$(this).parent('div').parent('div').find('a.recipeUrl').attr('href', $newRecipeUrl);
+				var $newRecipeTitle = celiacApp.snacks[0][i].recipeName;
+				$(this).parent('div').parent('div').find('a.recipeUrl').html($newRecipeTitle);
+				var $newRecipeIngredients =  celiacApp.snacks[0][i].ingredients;
+				var $newIngredientsString = $newRecipeIngredients.join(', ');
+				$(this).parent('div').parent('div').find('p.recipeIngredients').html('Ingredients: ' + $newIngredientsString);
+				var emailRoot = 'mailto:?subject=Gluten-Free Snack Recipe&body=';
+				var newEmailContent = '%0D%0A' + $newRecipeTitle + '%0D%0A' + $newRecipeUrl + '%0D%0A%0D%0Avia http://www.celiacmenuplanner.com';
+				var $newRecipeEmail = emailRoot.concat(newEmailContent);
+				$(this).parent('div').find('a.email').attr('href', $newRecipeEmail);
+				i = i+1;
+				// console.log(i);
 			} else {
-
+			 	// console.log(celiacApp.dinners[0][i]);
+			 	var $newImgUrl = celiacApp.dinners[0][i].imageUrlsBySize[90].replace("=s90-c","=s300-c");
+				var $newImg = $('<img>').attr('src', $newImgUrl);
+				$(this).parent('div').parent('div').parent('div').find('figure').children('img').replaceWith($newImg);
+				var $newRecipeId = celiacApp.dinners[0][i].id;
+				var $newRecipeUrl = celiacApp.yummlyRoot.concat($newRecipeId);
+				$(this).parent('div').parent('div').find('a.recipeUrl').attr('href', $newRecipeUrl);
+				var $newRecipeTitle = celiacApp.dinners[0][i].recipeName;
+				$(this).parent('div').parent('div').find('a.recipeUrl').html($newRecipeTitle);
+				var $newRecipeIngredients =  celiacApp.dinners[0][i].ingredients;
+				var $newIngredientsString = $newRecipeIngredients.join(', ');
+				$(this).parent('div').parent('div').find('p.recipeIngredients').html('Ingredients: ' + $newIngredientsString);
+				var emailRoot = 'mailto:?subject=Gluten-Free Dinner Recipe&body=';
+				var newEmailContent = '%0D%0A' + $newRecipeTitle + '%0D%0A' + $newRecipeUrl + '%0D%0A%0D%0Avia http://www.celiacmenuplanner.com';
+				var $newRecipeEmail = emailRoot.concat(newEmailContent);
+				$(this).parent('div').find('a.email').attr('href', $newRecipeEmail);
+				i = i+1;
+				// console.log(i);
 			}
 		});
-	// };
+	}
 };
 
 // init function
@@ -408,3 +465,5 @@ celiacApp.init = function() {
 $(document).ready(function(){
   celiacApp.init();
 });
+
+// end of js
