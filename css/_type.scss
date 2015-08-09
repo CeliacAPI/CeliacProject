@@ -1,45 +1,41 @@
 // text & link styles
 
-h1 {
+h1, h2, h4 {
 	font-family: 'Quicksand', sans-serif;
- 	font-size: 8rem;
-	color: $sanmarino;
 	font-weight: 400;
-	margin: 0;
+}
+
+h1 {
+ 	font-size: 8rem;
 	letter-spacing: -0.2rem;
 	text-shadow: 2px 2px white;
+	color: $sanmarino;
+	margin: 0;
 	padding-bottom: 3%;
-	font-weight:  400;
 }
 
 h2 {
-	color: white;
 	font-size: 3rem;
-	// border-top: 4px solid $aths;
-	// border-bottom: 4px solid $aths;
+	color: white;
 	margin: 0;
-	padding: 20px;
-	font-weight: 400;
-	font-family: 'Quicksand', sans-serif;
+	padding: 2rem;
 }
 
 h3 {
-	font-size: 3rem;
-	font-weight: 400;
 	font-family: 'Josefin Slab', serif;
+	font-weight: 400;
+	font-size: 3rem;
 	margin: 0;
 	display: inline;
 }
 
 h4 {
-	font-family: 'Quicksand', sans-serif;
-	font-weight: 400;
-	color: white;
+	color: rgba(128,128,128,1);
 }
 
 p {
 	font-size: 2rem;
-	line-height: 3rem;
+	line-height: 2.4rem;
 }
 
 // end of text & link styles

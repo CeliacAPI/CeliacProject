@@ -65,10 +65,15 @@ celiacApp.allergyChoice = function(){
 celiacApp.getBreakfast = function() {
 	// on click of get meal plan button
 	$('#buttonMeals').on('click', function(){
-		// fade out wrapper div
-		$('.wrapper').fadeOut();
 		// fade out h1
 		$('h1').fadeOut();
+		// fade out footer
+		$('footer').fadeOut();
+		// fade out wrapper div
+		$('.wrapper').fadeOut(400, function() {
+			// fade in loading div
+			$('.wrapperLoading').fadeIn();
+		});
 		// Drew told us to add this line of code ???
 		$.ajaxSettings.traditional = true;
 		// ajax request to yummly API for breakfast meals
@@ -304,9 +309,12 @@ celiacApp.displayDinner = function(matches){
 
 // method to show all days
 celiacApp.displayAll = function() {
-	// fadeOut wrapperSubmit & fadeIn wrapperMeals
-	$('.wrapperSubmit').fadeOut(600, function(){
+	// fadeOut loading div
+	$('.wrapperLoading').fadeOut(600, function(){
+		// fadeIn wrapperMeals
 		$('.wrapperMeals').fadeIn(600);
+		// fadeIn footer
+		$('footer').fadeIn(600);
 	});
 };
 

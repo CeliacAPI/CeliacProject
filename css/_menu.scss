@@ -2,7 +2,8 @@
 
 .wrapperMeals {
 	width: 60%;
-	margin: 0 auto;
+	max-width: 900px;
+	margin: 4rem auto 1rem auto;
 }
 
 .wrapperMeals img {
@@ -13,45 +14,54 @@
 	background: $sanmarino;
 	color: white;
 	text-align: left;
-	padding: 20px 0 20px 20px;
+	padding: 2rem;
 	border-bottom: 1px solid white;
-	a {
-		float: right;
-		font-size: 2.8rem;
-		color: white;
-		position: relative;
-		right: 30px;
-	}
 }
 
 .dayNameSun {
 	border-bottom: none;
 }
 
-.meal {
-	display: flex;
-	background: white; 
+.dayName a {
+	float: right;
+	font-size: 2.8rem;
+	color: white;
+	position: relative;
 }
 
-.flex-mealImg{
+.meal {
+	display: flex;
+	background: white;
+	border-bottom: 1px solid rgba(200,200,200,1);
+	padding-right: 1.6rem;
+}
+
+.dinner {
+	border-bottom: none;
+}
+
+.dinnerSun {
+	border-bottom: 1px solid rgba(200,200,200,1);
+}
+
+.flex-mealImg {
 	display: flex;
 	width: 30%;
-	padding: 10px;
+	padding: 1rem;
 }
 
 .flex-mealInfo {
 	display: flex;
 	width: 70%;
 	flex-direction: column;
-	padding-top: 10px;
+	padding: 1rem 0 1rem 0.5rem;
 	text-align: left;
 	justify-content: space-between;
-	padding-bottom: 1%;
 }
 
 .recipeUrl {
 	text-decoration: none;
-	font-size: 3rem;
+	font-size: 2.4rem;
 	font-family:'Quicksand', sans-serif;
 	color: $sanmarino;
 }
@@ -61,18 +71,21 @@
 }
 
 .recipeIngredients {
-	line-height: 2.2rem;
 	padding-right: 3rem;
 }
 
 .flex-mealLinks {
 	display: flex;
 	justify-content: space-between;
-	padding-right: 4%;
 	a {
 		font-size: 2rem;
 		text-decoration: none;
 		color: $downy;
+	}
+	a.email {
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		padding-top: 0.8rem;
 	}
 	a:hover {
 		color: darken($downy, 15%);
