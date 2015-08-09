@@ -4,7 +4,7 @@ h1 {
 	font-family: 'Quicksand', sans-serif;
  	font-size: 8rem;
 	color: $sanmarino;
-	font-weight: 300;
+	font-weight: 400;
 	margin: 0;
 	letter-spacing: -0.2rem;
 	text-shadow: 2px 2px white;
@@ -18,16 +18,24 @@ h2 {
 	// border-bottom: 4px solid $aths;
 	margin: 0;
 	padding: 20px;
-	font-weight: 500;
+	font-weight: 400;
 	font-family: 'Quicksand', sans-serif;
 }
+
 h3 {
-	font-size:3rem;
-	font-weight:300;
+	font-size: 3rem;
+	font-weight: 400;
 	font-family: 'Josefin Slab', serif;
-	margin:0;
-	display:inline;
+	margin: 0;
+	display: inline;
 }
+
+h4 {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
+	color: white;
+}
+
 p {
 	font-size: 2rem;
 	line-height: 3rem;

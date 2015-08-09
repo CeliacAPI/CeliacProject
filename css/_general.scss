@@ -1,40 +1,33 @@
 // general styles
 
 html {
-font-size: 10px;
-  background: url("../images/celiacback.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	font-size: 10px;
+  	background: url("../images/celiacback.jpg") no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 }
 
-
 body {
-
-	// background-image: url("../images/celiacback.jpg");
 	background-size: cover;
 	background-position: center bottom;
 	background-repeat: no-repeat;
 	font-family: 'Josefin Slab', serif;
 	text-align: center;
-
-
 }
 
-.backgroundcontainer {
- padding: 0px 0;
-
+.bgContainer {
+ 	padding: 0 0;
 }
 
 .wrapper {
 	max-width: 1000px;
 	width: 75%;
-	margin: 8rem auto;
+	margin: 0 auto;
 	background: rgba(66, 101, 173, 0.6);
 	padding: 2%;
-	height: 235px;
-
+	// height: 235px;
 }
 
 .title-wrapper {
@@ -49,6 +42,13 @@ header {
 	padding-bottom: 20px;
 }
 
+footer {
+	margin: 0 auto;
+	a {
+		color: white;
+	}
+}
+
 // helper styles
 
 .hide {
@@ -61,11 +61,18 @@ header {
 
 svg {
 	fill: $sanmarino;
-
 }
 
+// form & button styles
 
-//BUTTON STYLES
+form {
+	display:flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items: center;
+	padding-top: 9px;
+	padding-bottom: 10px;
+}
 
 button {
 	color: white;
@@ -75,50 +82,23 @@ button {
 	font-size: 18px;
 	font-family: 'Quicksand', sans-serif;
 	margin: 20px 0;
-}	
-
-form {
-	display:flex;
-	flex-direction:row;
-	justify-content: center;
-	align-items: center;
-	padding-top: 20px;
-
+	transition: all 0.5s ease;
 }
+
+button:hover {
+	background: darken($downy, 10%);
+}	
 
 input[type=radio] {
 	font-size: 100px;
+	margin-left: 15px;
 }
 
 label {
-	font-size:20px;
-	padding: 20px;
-	font-family:'Quicksand', sans-serif;
+	font-size: 20px;
+	padding: 20px 20px 20px 10px;
+	font-family: 'Quicksand', sans-serif;
 	color: white;
 }
 
 // end of general styles
-
-//MEAL LAYOUT STYLES
-
-.meal-flex {
-	display: flex;
-	width: 30%;
-	padding: 10px;
-}
-
-.flex-description {
-	display: flex;
-	width: 70%;
-	flex-direction: column;
-}
-
-.breakfast,
-.lunch,
-.snack,
-.dinner {
-	display: flex;
-	background: white; 
-}
-
-

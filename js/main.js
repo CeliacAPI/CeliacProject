@@ -287,7 +287,7 @@ celiacApp.displayDinner = function(matches){
 		var $recipeUrl = celiacApp.yummlyRoot.concat($recipeId);
 		$('.dinner .flex-mealName a').eq(i).attr('href', $recipeUrl);
 		var $recipeTitle = matches[i].recipeName;
-		$('.dinner p').eq(i).append($recipeTitle);
+		$('.dinner .flex-mealName a').eq(i).append($recipeTitle);
 		var $recipeIngredients =  matches[i].ingredients;
 		var $ingredientsString = $recipeIngredients.join(', ');
 		$('.dinner .flex-mealInfo .flex-mealName .recipeIngredients').eq(i).append($ingredientsString);
