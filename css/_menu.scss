@@ -30,6 +30,8 @@
 }
 
 .meal {
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	background: white;
 	border-bottom: 1px solid rgba(200,200,200,1);
@@ -45,18 +47,26 @@
 }
 
 .flex-mealImg {
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	width: 30%;
 	padding: 1rem;
 }
 
 .flex-mealInfo {
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	width: 70%;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
 	flex-direction: column;
+	-ms-justify-content: space-between;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
 	padding: 1rem 0 1rem 0.5rem;
 	text-align: left;
-	justify-content: space-between;
 }
 
 .recipeUrl {
@@ -75,7 +85,11 @@
 }
 
 .flex-mealLinks {
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
+	-ms-justify-content: space-between;
+	-webkit-justify-content: space-between;
 	justify-content: space-between;
 	a {
 		font-size: 2rem;
