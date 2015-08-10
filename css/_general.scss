@@ -54,8 +54,14 @@ header {
 footer {
 	margin: 0 auto;
 	padding: 0 6rem;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
 	flex-direction: column;
+	-ms-justify-content: space-between;
+	-webkit-justify-content: space-between;
 	justify-content: space-between;
 	a {
 		color: rgba(128,128,128,1);
@@ -75,9 +81,17 @@ footer {
 // form & button styles
 
 form {
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
+	-ms-flex-direction: row;
+	-webkit-flex-direction: row;
 	flex-direction: row;
+	-ms-justify-content: center;
+	-webkit-justify-content: center;
 	justify-content: center;
+	-ms-align-items: center;
+	-webkit-align-items: center;
 	align-items: center;
 	padding-top: 0.9rem;
 	padding-bottom: 1rem;
